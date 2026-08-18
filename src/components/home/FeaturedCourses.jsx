@@ -1,83 +1,91 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function FeaturedCourses() {
   const courses = [
     {
-      id: 1,
-      title: "Advanced Clinical Cardiology & Patient Care",
-      category: "Medical",
-      duration: "12 Weeks",
-      level: "Advanced",
+      slug: "post-rn-bsn",
+      title: "Post RN BSN",
+      category: "Nursing Degree",
+      duration: "2 Years",
+      level: "BSN Program",
       rating: "4.9",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
       price: "$499"
     },
     {
-      id: 2,
-      title: "Modern Nursing Practices & Emergency Response",
-      category: "Healthcare",
-      duration: "8 Weeks",
-      level: "Intermediate",
+      slug: "msn",
+      title: "MSN (Master of Science in Nursing)",
+      category: "Master of Science in Nursing",
+      duration: "2 Years",
+      level: "Master's Program",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop",
       price: "$349"
     },
     {
-      id: 3,
-      title: "Healthcare Administration & Hospital Management",
-      category: "Management",
-      duration: "10 Weeks",
-      level: "All Levels",
+      slug: "bsn-generic",
+      title: "BSN Generic (4 Years)",
+      category: "Undergraduate Degree",
+      duration: "4 Years",
+      level: "Degree Program",
       rating: "4.9",
-      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop",
       price: "$420"
     },
     {
-      id: 4,
-      title: "Pharmacology Essentials for Medical Professionals",
-      category: "Pharmacy",
-      duration: "6 Weeks",
-      level: "Intermediate",
+      slug: "certified-surgical-technologist",
+      title: "Certified Surgical Technologist",
+      category: "Allied Health",
+      duration: "1 Year",
+      level: "Diploma",
       rating: "4.7",
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop",
       price: "$299"
     },
     {
-      id: 5,
-      title: "Physical Therapy & Rehabilitation Specialist",
-      category: "Therapy",
-      duration: "14 Weeks",
-      level: "Advanced",
+      slug: "critical-care-nursing-diploma",
+      title: "Critical Care Nursing",
+      category: "Specialized Diploma",
+      duration: "1 Year",
+      level: "Specialization",
       rating: "5.0",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=800&auto=format&fit=crop",
       price: "$550"
     },
     {
-      id: 6,
-      title: "Global Public Health & Epidemiology Foundations",
-      category: "Public Health",
-      duration: "10 Weeks",
-      level: "Intermediate",
+      slug: "hospital-administration-management",
+      title: "Healthcare Administration",
+      category: "Management",
+      duration: "6 Months",
+      level: "Certificate",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
       price: "$399"
     }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Number of cards visible at a time
-  const visibleCount = 2;
-  const maxIndex = courses.length - visibleCount;
+  // Responsive visible count: 1 card on mobile, 2 cards on medium screens and up
+  const getVisibleCount = () => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      return 1;
+    }
+    return 2;
+  };
 
+  // We can track index safely; maxIndex depends on view width layout logic or use CSS scroll-snap for mobile robustness
   const prevSlide = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - visibleCount));
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => Math.min(maxIndex, prev + visibleCount));
+    const visibleCount = window.innerWidth < 768 ? 1 : 2;
+    const maxIdx = courses.length - visibleCount;
+    setCurrentIndex((prev) => Math.min(maxIdx, prev + 1));
   };
 
   return (
@@ -86,7 +94,6 @@ export default function FeaturedCourses() {
       {/* Centered Top Header & Intro Area with Integrated Big Red CTA */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/80 text-blue-600 text-xs font-semibold uppercase tracking-widest mb-6 shadow-sm">
-          {/* <span className="w-2 h-2 rounded-full bg-blue-600"></span> */}
           Trending Courses
         </div>
         
@@ -101,7 +108,7 @@ export default function FeaturedCourses() {
 
         {/* Big Red "See all courses" CTA */}
         <div className="flex justify-center">
-          <a
+          <Link
             href="/courses"
             className="inline-flex items-center justify-center px-10 py-4 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-bold text-base tracking-wide shadow-xl hover:scale-105 transition-all duration-200 whitespace-nowrap"
           >
@@ -109,7 +116,7 @@ export default function FeaturedCourses() {
             <svg className="w-5 h-5 ml-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -118,41 +125,41 @@ export default function FeaturedCourses() {
         
         <div className="relative flex items-center">
           
-          {/* Left Arrow Button (Hidden when at the first slide) */}
+          {/* Left Arrow Button */}
           {currentIndex > 0 && (
             <button 
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="absolute -left-4 sm:-left-6 lg:-left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-300 text-slate-800 flex items-center justify-center shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-200"
+              className="absolute -left-2 sm:-left-6 lg:-left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-300 text-slate-800 flex items-center justify-center shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-200"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
           )}
 
-          {/* Right Arrow Button (Hidden when at the last group of courses) */}
-          {currentIndex < maxIndex && (
+          {/* Right Arrow Button */}
+          {currentIndex < courses.length - (typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 2) && (
             <button 
               onClick={nextSlide}
               aria-label="Next slide"
-              className="absolute -right-4 sm:-right-6 lg:-right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-slate-300 text-slate-800 flex items-center justify-center shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-200"
+              className="absolute -right-2 sm:-right-6 lg:-right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-300 text-slate-800 flex items-center justify-center shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-200"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
               </svg>
             </button>
           )}
 
-          {/* Smooth Sliding Viewport Wrapper (2 cards viewable per screen) */}
-          <div className="w-full overflow-hidden">
+          {/* Smooth Sliding Viewport Wrapper with native mobile touch/scroll support */}
+          <div className="w-full overflow-x-auto md:overflow-hidden scrollbar-none scroll-smooth">
             <div 
               className="flex transition-transform duration-500 ease-in-out gap-6"
-              style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / (typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 2))}%)` }}
             >
               {courses.map((item) => (
                 <div 
-                  key={item.id}
+                  key={item.slug}
                   className="min-w-[100%] md:min-w-[calc(50%-12px)] relative h-[480px] sm:h-[520px] rounded-3xl overflow-hidden shadow-2xl group border border-slate-300 flex flex-col justify-end flex-shrink-0"
                 >
                   
@@ -171,9 +178,6 @@ export default function FeaturedCourses() {
                     <span className="bg-white/95 backdrop-blur-md border border-slate-200 px-3 py-1 rounded-full text-xs font-bold text-blue-600 uppercase tracking-wider shadow-md">
                       {item.category}
                     </span>
-                    {/* <span className="bg-blue-600/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-white shadow-md font-mono">
-                      {item.price}
-                    </span> */}
                   </div>
 
                   {/* Bottom Content Area */}
@@ -202,13 +206,13 @@ export default function FeaturedCourses() {
 
                     {/* Enroll CTA */}
                     <div>
-                      <a 
-                        href={`/courses/${item.id}`}
+                      <Link 
+                        href={`/courses/${item.slug}`}
                         className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm tracking-wide shadow-lg gap-2 transition-all duration-200"
                       >
                         Enroll Now 
                         <span>&rarr;</span>
-                      </a>
+                      </Link>
                     </div>
 
                   </div>

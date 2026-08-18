@@ -34,16 +34,15 @@ export default function HospitalHistory() {
         </div>
 
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-8">
-          Kiran <span className="text-red-600">General</span> & <span className="text-blue-600">Surgical</span> Hospital
-        </h2>
+          Kiran College of <span className="text-red-600">Nursing</span> & Allied <span className="text-blue-600"> Health Sciences </span> </h2>
 
         {/* Simple Paragraph Text Telling History Below (No white box background) */}
         <div className="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700 max-w-3xl">
-          <p>
-            Kiran General & Surgical Hospital was established with a clear vision: to provide accessible, high-quality, and compassionate healthcare to our community. From our early days as a dedicated medical center, we have continuously grown our clinical capabilities, state-of-the-art facilities, and specialized surgical departments.
+<p>
+            Kiran College of Nursing & Allied Health Sciences was established with a clear vision: to provide accessible, high-quality, and compassionate education and healthcare to our community. From our early days as a dedicated medical and educational center, we have continuously grown our academic programs, clinical capabilities, state-of-the-art facilities, and specialized departments.
           </p>
           <p>
-            Over the years, our unwavering commitment to patient safety and clinical excellence has made us a trusted healthcare partner for thousands of families. Today, our experienced team of physicians, surgeons, and support staff continue to uphold this proud tradition, delivering 24/7 emergency care, advanced diagnostics, and comprehensive medical treatments under one roof.
+            Over the years, our unwavering commitment to academic excellence, patient safety, and clinical standards has made us a trusted educational and healthcare partner for thousands of families. Today, our experienced team of faculty members, physicians, surgeons, and support staff continue to uphold this proud tradition, delivering comprehensive medical education, 24/7 emergency care, advanced diagnostics, and specialized healthcare treatments under one roof.
           </p>
         </div>
 

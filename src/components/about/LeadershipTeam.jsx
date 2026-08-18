@@ -47,7 +47,7 @@ export default function LeadershipTeam() {
             Our Leadership <span className="text-blue-600">Team</span>
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl mt-6 font-light leading-relaxed">
-            Meet the experienced leaders guiding Kiran General & Surgical Hospital toward excellence in healthcare and education.
+            Meet the experienced leaders guiding Kiran College of Nursing & Allied Health Sciences toward excellence in healthcare and education.
           </p>
         </div>
 

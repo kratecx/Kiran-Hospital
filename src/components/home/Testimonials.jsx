@@ -1,24 +1,24 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      category: "PATIENT STORIES",
-      title: "Real Patient Feedback",
-      description: "A collection of real patient stories showcasing how our 24/7 emergency care, specialized outpatient clinics, and advanced diagnostics saved lives and restored health.",
-      name: "Dr. Ahmed Raza",
-      role: "Cardiac Patient",
-      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-having-fun-at-a-bar-41585-large.mp4",
-      poster: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
-      quote: "The 24/7 emergency care and the dedication of the medical staff saved my life during a critical cardiac event. The level of empathy and professional competence here is truly world-class."
-    },
-    {
       category: "STUDENT SUCCESS",
-      title: "Student & Graduate Success",
-      description: "Discover how our BSN nursing programs, allied health diplomas, and clinical workshops empower the next generation of healthcare professionals with hands-on expertise.",
+      title: "Excellence in Nursing Education",
+      description: "Hear from our dedicated BSN nursing students who experience hands-on clinical training, expert faculty mentorship, and real-world medical exposure every single day.",
       name: "Fatima Noor",
       role: "BSN Nursing, Final Year",
       videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-young-woman-working-on-a-laptop-in-a-cafe-41582-large.mp4",
       poster: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1000&auto=format&fit=crop",
-      quote: "Studying here has given me unmatched clinical exposure. Working side-by-side with experienced practitioners in real hospital wards has prepared me completely for my professional career."
+      quote: "Studying here has given me unmatched clinical exposure. Working side-by-side with experienced practitioners in hospital wards has prepared me completely for a professional career in healthcare."
+    },
+    {
+      category: "ACADEMIC EXCELLENCE",
+      title: "World-Class Allied Health Programs",
+      description: "Discover how our specialized diplomas in Pharmacy, Ultrasound, and MLT equip students with advanced technical skills and comprehensive academic knowledge.",
+      name: "Muhammad Ali",
+      role: "Allied Health Sciences Graduate",
+      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-having-fun-at-a-bar-41585-large.mp4",
+      poster: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
+      quote: "The curriculum bridges theory and practice seamlessly. The state-of-the-art labs and dedicated faculty provided me with the absolute best foundation to launch my medical career."
     }
   ];
 
@@ -35,20 +35,19 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-slate-300/70 mb-5 shadow-sm backdrop-blur-md">
-            {/* <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> */}
             <span className="text-blue-600 font-semibold text-xs uppercase tracking-widest">
-              Testimonials
+              Academic Testimonials
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Trusted By <span className="text-blue-600">Our Community</span>
+            Trusted By <span className="text-blue-600">Our Students</span>
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl mt-6 font-light leading-relaxed">
-            Real feedback from patients and students who experienced our medical care and educational excellence firsthand.
+            Real feedback from nursing and allied health students who experienced our academic excellence and clinical training firsthand.
           </p>
         </div>
 
-        {/* Testimonials Rows (Both Patients & Students displayed simultaneously) */}
+        {/* Testimonials Rows */}
         <div className="space-y-24">
           {testimonials.map((item, index) => (
             <div 
@@ -95,7 +94,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <div className="text-sm font-bold text-slate-900">
-                    4.9 <span className="text-slate-400 font-normal">/ 12,480 REVIEWS</span>
+                    4.9 <span className="text-slate-400 font-normal">/ STUDENT SATISFACTION</span>
                   </div>
                 </div>
               </div>

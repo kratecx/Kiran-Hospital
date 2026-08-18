@@ -24,7 +24,7 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex">
-                <span className="font-extrabold tracking-tight text-lg leading-tight">Kiran General <span className="text-red-500 font-extrabold tracking-tight text-lg leading-tight"> Hospital</span> </span> 
+                <span className="font-extrabold tracking-tight text-lg leading-tight">KCON </span> 
               </div>
             </a>
           </div>

@@ -143,61 +143,21 @@ export default function GalleryHeroComponent() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-32">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md mb-4">
-            Hospital & Academic Gallery
+            Academic Gallery
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-medium">
-            Discover our comprehensive presentation featuring top-tier hospital services, medical machinery, and fully loaded academic showcases with progressive loading.
+            Discover our comprehensive presentation featuring top-tier fully loaded academic showcases with progressive loading.
           </p>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20 pb-28 space-y-20">
         
-        <section className="bg-gradient-to-br from-white/95 via-white/80 to-slate-100/90 backdrop-blur-2xl border border-white/80 rounded-[2.5rem] p-6 sm:p-12 shadow-xl shadow-slate-900/5">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Hospital service related
-            </h2>
-            <div className="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {getFilteredHospitalImages().map((item) => (
-              <div 
-                key={item.id} 
-                className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 hover:shadow-xl hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={item.src}
-                    alt={item.caption}
-                    fill
-                    unoptimized
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="bg-slate-900/90 backdrop-blur-md py-3 px-4 text-center border-t border-slate-800">
-                  <span className="text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    {item.caption}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {visibleHospitalCount < hospitalCaptionImages.length && (
-            <div ref={loadMoreHospitalRef} className="py-8 text-center text-xs font-bold uppercase tracking-widest text-slate-400">
-              Scrolling to load more hospital images...
-            </div>
-          )}
-        </section>
 
         <section className="bg-gradient-to-br from-white/95 via-white/80 to-slate-100/90 backdrop-blur-2xl border border-white/80 rounded-[2.5rem] p-6 sm:p-12 shadow-xl shadow-slate-900/5">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Academics related
+              Gallery of Academia
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded-full" />
           </div>
