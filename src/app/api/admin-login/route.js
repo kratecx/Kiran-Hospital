@@ -20,7 +20,7 @@ export async function POST(request) {
       return response;
     }
 
-    return NextResponse.json({ success: false, message: "Invalid Secret Key (Use: 123)" }, { status: 401 });
+    return NextResponse.json({ success: false, message: "Invalid Secret Key" }, { status: 401 });
   } catch (error) {
     return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
   }

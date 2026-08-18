@@ -91,7 +91,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a href="tel:+92356012589" className="hover:text-slate-900 transition-colors font-medium text-slate-800">
-                  +99999999
+                  +92 345 2032 616
                 </a>
               </li>
 
@@ -102,7 +102,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a href="mailto:info@kratecx.com" className="hover:text-slate-900 transition-colors font-medium text-slate-800">
-                  info@kiranghs.com
+                  kiran.kcnahs@gmail.com
                 </a>
               </li>
 
@@ -114,7 +114,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-slate-700">
-                  Karachi, Pakistan
+                  Metroville, Zia Colony Plot#148 Sector 4/F, Orangi Town, Karachi
                 </span>
               </li>
             </ul>
