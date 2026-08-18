@@ -1,10 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
+import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Trash2, Edit3, ShieldAlert, Layers } from "lucide-react";
 
-export default function UnifiedAdminDashboard() {
+function AdminDashboardContent() {
   const searchParams = useSearchParams();
   const secret = searchParams.get("secret") || "";
 
@@ -108,7 +111,6 @@ export default function UnifiedAdminDashboard() {
       });
     }
 
-    // Scroll smoothly up to the form container
     if (formRef.current) {
       formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -367,5 +369,13 @@ export default function UnifiedAdminDashboard() {
 
       </div>
     </div>
+  );
+}
+
+export default function UnifiedAdminDashboard() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#e2e3dd] flex items-center justify-center text-xs font-bold uppercase tracking-widest text-[#555555]">Loading Admin Panel...</div>}>
+      <AdminDashboardContent />
+    </Suspense>
   );
 }
