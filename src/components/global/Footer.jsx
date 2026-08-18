@@ -9,21 +9,21 @@ export default function Footer() {
           {/* Column 1: Company */}
           <div>
             <h3 className="text-slate-900 font-semibold text-base mb-6 relative inline-block">
-              Company
+              Pages
               <span className="absolute left-0 -bottom-2 w-8 h-0.5 bg-red-600 rounded-full"></span>
             </h3>
             <ul className="space-y-3.5 text-sm">
               <li>
-                <a href="/about" className="hover:text-slate-900 transition-colors">About</a>
+                <a href="/about" className="hover:text-slate-900 transition-colors">Home</a>
               </li>
               <li>
-                <a href="/process" className="hover:text-slate-900 transition-colors">Process</a>
+                <a href="/process" className="hover:text-slate-900 transition-colors">About</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Portfolio</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Courses</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">Services</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">Gallery</a>
               </li>
               <li>
                 <a href="/contact" className="hover:text-red-500 text-red-600 font-medium transition-colors">Contact Us</a>
@@ -34,66 +34,58 @@ export default function Footer() {
           {/* Column 2: Our Services */}
           <div>
             <h3 className="text-slate-900 font-semibold text-base mb-6 relative inline-block">
-              Our Services
+              Courses
               <span className="absolute left-0 -bottom-2 w-8 h-0.5 bg-red-600 rounded-full"></span>
             </h3>
             <ul className="space-y-3.5 text-sm">
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">Business Websites</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">Post RN BSN</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">E-Commerce Websites</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">MS Nursing</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">Web Applications</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">BSN Generic</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">Landing Pages</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">Surgical Technologist</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">Website Redesign</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">Critical Care Nursing</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-slate-900 transition-colors">On-Page & Technical SEO</a>
+                <a href="/services" className="hover:text-slate-900 transition-colors">Healthcare Administration</a>
               </li>
-              <li className="pt-1">
-                <a href="/services" className="text-red-600 hover:text-red-500 font-semibold transition-colors inline-flex items-center gap-1">
-                  Explore More &rarr;
-                </a>
-              </li>
+ 
             </ul>
           </div>
 
           {/* Column 3: Our Works */}
           <div>
             <h3 className="text-slate-900 font-semibold text-base mb-6 relative inline-block">
-              Our Works
+              Services
               <span className="absolute left-0 -bottom-2 w-8 h-0.5 bg-red-600 rounded-full"></span>
             </h3>
             <ul className="space-y-3.5 text-sm">
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Activ8 Story</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">24/7 Emergency</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Best Antennas</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Professional Nursing</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">E & G Financial Solutions</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Allied Health Sciences</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Grays Travels</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Specialized Clinic</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Craft Colors</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Imaging Center</a>
               </li>
               <li>
-                <a href="/gallery" className="hover:text-slate-900 transition-colors">Abu Hamza Perfume</a>
+                <a href="/gallery" className="hover:text-slate-900 transition-colors">Medical Education</a>
               </li>
-              <li className="pt-1">
-                <a href="/gallery" className="text-red-600 hover:text-red-500 font-semibold transition-colors inline-flex items-center gap-1">
-                  Explore More &rarr;
-                </a>
-              </li>
+
             </ul>
           </div>
 
@@ -111,7 +103,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a href="tel:+92356012589" className="hover:text-slate-900 transition-colors font-medium text-slate-800">
-                  +92356012589
+                  +99999999
                 </a>
               </li>
 
@@ -122,7 +114,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a href="mailto:info@kratecx.com" className="hover:text-slate-900 transition-colors font-medium text-slate-800">
-                  info@kratecx.com
+                  info@kiranghs.com
                 </a>
               </li>
 
@@ -134,7 +126,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-slate-700">
-                  Metroville Sindh, Pakistan
+                  Karachi, Pakistan
                 </span>
               </li>
             </ul>

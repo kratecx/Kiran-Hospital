@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-slate-900 text-slate-900 overflow-hidden py-32 lg:pb-44 border-b border-slate-200">
+    <section className="relative bg-slate-900 text-slate-900 overflow-hidden py-16 lg:pb-44 border-b border-slate-200">
       
       {/* Background Hospital Environment Image with a balanced overlay for sharp image clarity */}
       <div className="absolute inset-0 z-0">
@@ -71,6 +71,14 @@ export default function HeroSection() {
         </div>
 
       </div>
+
+      {/* Smooth Blurry Fade Transition at the Bottom */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-24 backdrop-blur-[2px] pointer-events-none"
+        style={{
+          background: "linear-gradient(to top, #e2e3dd 0%, rgba(226,227,221,0.5) 50%, transparent 100%)"
+        }}
+      ></div>
     </section>
   );
 }

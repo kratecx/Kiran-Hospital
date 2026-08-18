@@ -35,7 +35,7 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-slate-300/70 mb-5 shadow-sm backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            {/* <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> */}
             <span className="text-blue-600 font-semibold text-xs uppercase tracking-widest">
               Testimonials
             </span>

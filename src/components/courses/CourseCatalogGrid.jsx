@@ -6,7 +6,7 @@ import { coursesData } from "@/data/coursesData";
 
 export default function CourseCatalogGrid() {
   return (
-    <section className="relative py-24 bg-[#e2e3dd] text-slate-700 overflow-hidden">
+    <section className="relative py-16 bg-[#e2e3dd] text-slate-700 overflow-hidden">
       
       {/* Background Image with warm/neutral styling */}
       <div className="absolute inset-0 z-0">

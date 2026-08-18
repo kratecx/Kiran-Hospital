@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,30 +11,36 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Brand Logo / Name on Left */}
+          {/* Brand Logo / Image and Name on Left */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" className="flex items-center gap-2.5 text-white font-bold text-xl tracking-tight group">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-600 inline-block shadow-[0_0_12px_rgba(220,38,38,0.6)] transition-transform group-hover:scale-125"></span>
-              <span className="font-extrabold tracking-normal">Medi</span>
-              <span className="text-red-500 font-medium tracking-normal">Learn</span>
+            <a href="/" className="flex items-center gap-3 text-white font-bold text-xl tracking-tight group">
+              <div className="relative w-12 h-12 overflow-hidden rounded-full shadow-[0_0_12px_rgba(220,38,38,0.4)] transition-transform group-hover:scale-105 bg-white flex items-center justify-center">
+                <Image 
+                  src="/logo.png" 
+                  alt="Kiran General Hospital Logo" 
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="flex">
+                <span className="font-extrabold tracking-tight text-lg leading-tight">Kiran General <span className="text-red-500 font-extrabold tracking-tight text-lg leading-tight"> Hospital</span> </span> 
+              </div>
             </a>
           </div>
 
           {/* Desktop Navigation Links on Right */}
           <div className="hidden md:flex items-center space-x-1">
-            <a href="/" className="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 font-medium text-md transition-all duration-200">
+            <a href="/" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               Home
             </a>
-            <a href="/about" className="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 font-medium text-md transition-all duration-200">
+            <a href="/about" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               About
             </a>
-            <a href="/courses" className="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 font-medium text-md transition-all duration-200">
+            <a href="/courses" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               Courses
             </a>
-            {/* <a href="/services" className="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 font-medium text-md transition-all duration-200">
-              Services
-            </a> */}
-            <a href="/gallery" className="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 font-medium text-md transition-all duration-200">
+            <a href="/gallery" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               Gallery
             </a>
             <a href="/contact" className="ml-2 px-8 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium text-md shadow-md shadow-red-900/20 transition-all duration-200">
@@ -46,7 +53,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
-              className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 focus:outline-none transition-colors"
+              className="p-2.5 rounded-xl text-slate-100 hover:text-white hover:bg-white/10 focus:outline-none transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -81,12 +88,6 @@ export default function Navbar() {
             className="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 font-medium transition-colors"
           >
             Courses
-          </a>
-          <a 
-            href="/services" 
-            className="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 font-medium transition-colors"
-          >
-            Services
           </a>
           <a 
             href="/gallery" 

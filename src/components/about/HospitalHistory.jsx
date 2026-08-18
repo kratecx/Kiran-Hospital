@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HospitalHistory() {
   return (
-    <section className="relative py-20 bg-[#e2e3dd] text-slate-700 overflow-hidden">
+    <section className="relative py-10 bg-[#e2e3dd] text-slate-700 overflow-hidden">
       
       {/* Background Image using unoptimized Next.js Image with warm/neutral styling */}
       <div className="absolute inset-0 z-0">
@@ -23,7 +23,7 @@ export default function HospitalHistory() {
 
 
         {/* Very Large Logo without any box */}
-        <div className="relative w-56 h-56 sm:w-90 sm:h-90 mb-10">
+        <div className="relative w-56 h-56 sm:w-90 sm:h-90 ">
           <Image
             src="/logo.png"
             alt="Kiran General & Surgical Hospital Logo"
@@ -48,6 +48,13 @@ export default function HospitalHistory() {
         </div>
 
       </div>
+
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-24 backdrop-blur-[2px] pointer-events-none"
+        style={{
+          background: "linear-gradient(to top, #e2e3dd 0%, rgba(226,227,221,0.5) 50%, transparent 100%)"
+        }}
+      ></div>
     </section>
   );
 }

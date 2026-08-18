@@ -86,7 +86,7 @@ export default function FeaturedCourses() {
       {/* Centered Top Header & Intro Area with Integrated Big Red CTA */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/80 text-blue-600 text-xs font-semibold uppercase tracking-widest mb-6 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+          {/* <span className="w-2 h-2 rounded-full bg-blue-600"></span> */}
           Trending Courses
         </div>
         
@@ -171,9 +171,9 @@ export default function FeaturedCourses() {
                     <span className="bg-white/95 backdrop-blur-md border border-slate-200 px-3 py-1 rounded-full text-xs font-bold text-blue-600 uppercase tracking-wider shadow-md">
                       {item.category}
                     </span>
-                    <span className="bg-blue-600/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-white shadow-md font-mono">
+                    {/* <span className="bg-blue-600/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-bold text-white shadow-md font-mono">
                       {item.price}
-                    </span>
+                    </span> */}
                   </div>
 
                   {/* Bottom Content Area */}
