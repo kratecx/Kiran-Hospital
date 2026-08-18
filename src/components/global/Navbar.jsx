@@ -24,7 +24,7 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex">
-                <span className="font-extrabold tracking-tight text-lg leading-tight">KCON </span> 
+                <span className="font-extrabold tracking-tight text-lg leading-tight">KCON</span> 
               </div>
             </a>
           </div>
@@ -43,8 +43,11 @@ export default function Navbar() {
             <a href="/gallery" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               Gallery
             </a>
-            <a href="/contact" className="ml-2 px-8 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium text-md shadow-md shadow-red-900/20 transition-all duration-200">
+            <a href="/contact" className="px-3.5 py-2 rounded-lg text-slate-100 hover:text-white hover:bg-white/10 font-medium text-md transition-all duration-200">
               Contact
+            </a>
+            <a href="/applynow" className="ml-2 px-6 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium text-md shadow-md shadow-red-900/20 transition-all duration-200">
+              Apply Now
             </a>
           </div>
 
@@ -95,12 +98,18 @@ export default function Navbar() {
           >
             Gallery
           </a>
+          <a 
+            href="/contact" 
+            className="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 font-medium transition-colors"
+          >
+            Contact
+          </a>
           <div className="pt-2">
             <a 
-              href="/contact" 
+              href="/applynow" 
               className="block text-center px-4 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium shadow-md transition-colors"
             >
-              Contact
+              Apply Now
             </a>
           </div>
         </div>
