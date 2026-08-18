@@ -4,13 +4,13 @@ export async function POST(request) {
   try {
     const { secretKey } = await request.json();
 
-    if (secretKey === process.env.ADMIN_SECRET_KEY) {
+    // Directly set password to "123" here
+    if (secretKey === "123") {
       const response = NextResponse.json({ success: true, message: "Authenticated successfully" });
       
-      // Set a secure cookie valid for this session/day
       response.cookies.set({
         name: "admin_auth",
-        value: process.env.ADMIN_SECRET_KEY,
+        value: "authenticated_session",
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         path: "/",
@@ -20,7 +20,7 @@ export async function POST(request) {
       return response;
     }
 
-    return NextResponse.json({ success: false, message: "Invalid Secret Key" }, { status: 401 });
+    return NextResponse.json({ success: false, message: "Invalid Secret Key (Use: 123)" }, { status: 401 });
   } catch (error) {
     return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
   }
